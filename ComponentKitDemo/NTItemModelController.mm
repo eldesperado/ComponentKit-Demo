@@ -41,7 +41,7 @@ static NSArray *generateItems(NSInteger count)
 
     for (NSUInteger i = 0; i< count; i++) {
         NSString *title = generateTitle();
-        NSString *imageURLString = [NSString stringWithFormat:@"https://unsplash.it/200/300?image=%d", arc4random_uniform((uint32_t)30)];
+        NSString *imageURLString = [NSString stringWithFormat:@"https://unsplash.it/500/300?image=%d", arc4random_uniform((uint32_t)30)];
         NTItem *item = [[NTItem alloc] initWithTitle:title imageURLString:imageURLString];
         
         [_items addObject:item];
@@ -71,7 +71,15 @@ static NSArray *titleList()
                    @"Captains Of The Past",
                    @"Moon Of Men's Legacy",
                    @"Guardians Of The Moon",
-                   @"Obliteration Of Our Destiny"
+                   @"Obliteration Of Our Destiny",
+                   @"Chase Of Darkness",
+                   @"Broken The End Of The Sun",
+                   @"Celebrating A Robot Takeover",
+                   @"Harlequin Kicked Me Out",
+                   @"Doctor And Buffoon",
+                   @"Pig And Buffoon",
+                   @"Tricks Exploit",
+                   @"Fools Program"
                    ];
     });
     return titles;

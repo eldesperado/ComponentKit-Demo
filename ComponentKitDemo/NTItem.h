@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface NTItem : NSObject
+
+@property(strong, nonatomic, readonly) NSString *itemId;
+@property(copy, nonatomic, readonly) NSString *title;
+@property(strong, nonatomic, readonly) NSURL *imageURL;
+
+- (instancetype)initWithTitle:(NSString *)title imageURLString:(NSString *)imageURLString;
 
 @end

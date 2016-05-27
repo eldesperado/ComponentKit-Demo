@@ -10,4 +10,9 @@
 
 @interface NTItemsPage : NSObject
 
+@property(strong, nonatomic, readonly) NSArray *items;
+@property(assign, nonatomic, readonly) NSInteger position;
+
+- (instancetype)initWithItems:(NSArray *)items position:(NSInteger)position;
+
 @end

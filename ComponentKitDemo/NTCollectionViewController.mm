@@ -11,12 +11,14 @@
 #import "NTItemModelController.h"
 #import "NTNetworkImageDownloader.h"
 #import <ComponentKit/ComponentKit.h>
+#import "NTItemComponent.h"
+#import "NTItemsPage.h"
 
-@interface NTCollectionViewController ()
+@interface NTCollectionViewController () <CKComponentProvider, UICollectionViewDelegateFlowLayout>
 
 @property(strong, nonatomic) CKCollectionViewDataSource *dataSource;
 @property(strong, nonatomic)
-    CKComponentFlexibleSizeRangeProvider *sizeRangeProvider;
+CKComponentFlexibleSizeRangeProvider *sizeRangeProvider;
 @property(strong, nonatomic) NTItemModelController *itemModelController;
 @property(strong, nonatomic) NTNetworkImageDownloader *networkImageDownloader;
 
@@ -28,108 +30,114 @@ static NSString *const reuseIdentifier = @"Cell";
 
 #pragma mark - Initialization
 - (instancetype)initWithCollectionViewLayout:(UICollectionViewLayout *)layout {
-  self = [super initWithCollectionViewLayout:layout];
-  if (self == nil) {
+    self = [super initWithCollectionViewLayout:layout];
+    if (self == nil) {
+        return self;
+    }
+    
+    _sizeRangeProvider = [CKComponentFlexibleSizeRangeProvider
+                          providerWithFlexibility:CKComponentSizeRangeFlexibleHeight];
+    _itemModelController = [[NTItemModelController alloc] init];
+    _networkImageDownloader = [[NTNetworkImageDownloader alloc] init];
+    
     return self;
-  }
-
-  _sizeRangeProvider = [CKComponentFlexibleSizeRangeProvider
-      providerWithFlexibility:CKComponentSizeRangeFlexibleHeight];
-  _itemModelController = [[NTItemModelController alloc] init];
-  _networkImageDownloader = [[NTNetworkImageDownloader alloc] init];
-
-  return self;
 }
 
 #pragma mark - Life Cycle
 
 - (void)viewDidLoad {
-  [super viewDidLoad];
-
-  // Setup Collection View
-  self.collectionView.delegate = self;
-
-  // Create a new Item Context
-  NTItemContext *context = [[NTItemContext alloc]
-      initWithImageDownloader:self.networkImageDownloader];
-
-  // Create a new Datasource
-  self.dataSource = [[CKCollectionViewDataSource alloc]
-           initWithCollectionView:self.collectionView
-      supplementaryViewDataSource:nil
-                componentProvider:[self class]
-                          context:context
-        cellConfigurationFunction:nil];
+    [super viewDidLoad];
     
-  // Insert a new section
+    // Setup Collection View
+    self.collectionView.delegate = self;
+    
+    // Set Title
+    self.title = @"UNSPLASH";
+    
+    // Create a new Item Context
+    NTItemContext *context = [[NTItemContext alloc]
+                              initWithImageDownloader:self.networkImageDownloader];
+    
+    // Create a new Datasource
+    self.dataSource = [[CKCollectionViewDataSource alloc]
+                       initWithCollectionView:self.collectionView
+                       supplementaryViewDataSource:nil
+                       componentProvider:[self class]
+                       context:context
+                       cellConfigurationFunction:nil];
+    
+    // Insert a new section
     CKArrayControllerSections sections;
     sections.insert(0);
-    [self.dataSource enqueueChangeset:{sections, {}} constrainedSize:{}];
+    [_dataSource enqueueChangeset:{sections, {}} constrainedSize:{}];
+    [self _enqueuePage:[_itemModelController fetchNewQuotesPageWithCount:3]];
 }
 
-#pragma mark <UICollectionViewDataSource>
-
-- (NSInteger)numberOfSectionsInCollectionView:
-    (UICollectionView *)collectionView {
-#warning Incomplete implementation, return the number of sections
-  return 0;
+#pragma mark - Fetching Items
+- (void)_enqueuePage:(NTItemsPage *)itemPage
+{
+    NSArray *items = itemPage.items;
+    NSInteger position = itemPage.position;
+    
+    // Convert the array of quotes to a valid changeset
+    CKArrayControllerInputItems inputItems;
+    for (NSInteger i = 0; i < [items count]; i++) {
+        inputItems.insert([NSIndexPath indexPathForRow:position + i inSection:0], items[i]);
+    }
+    [_dataSource enqueueChangeset:{{}, inputItems}
+                  constrainedSize:[_sizeRangeProvider sizeRangeForBoundingSize:self.collectionView.bounds.size]];
 }
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView
-     numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of items
-  return 0;
+#pragma mark - UICollectionViewDelegateFlowLayout
+
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout *)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [_dataSource sizeForItemAtIndexPath:indexPath];
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
-                  cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-  UICollectionViewCell *cell =
-      [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier
-                                                forIndexPath:indexPath];
-
-  // Configure the cell
-
-  return cell;
+- (void)collectionView:(UICollectionView *)collectionView
+       willDisplayCell:(UICollectionViewCell *)cell
+    forItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [_dataSource announceWillAppearForItemInCell:cell];
 }
 
-#pragma mark <UICollectionViewDelegate>
+- (void)collectionView:(UICollectionView *)collectionView
+  didEndDisplayingCell:(UICollectionViewCell *)cell
+    forItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [_dataSource announceDidDisappearForItemInCell:cell];
+}
 
-/*
- // Uncomment this method to specify if the specified item should be highlighted
- during tracking
- - (BOOL)collectionView:(UICollectionView *)collectionView
- shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-        return YES;
- }
- */
 
-/*
- // Uncomment this method to specify if the specified item should be selected
- - (BOOL)collectionView:(UICollectionView *)collectionView
- shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
- return YES;
- }
- */
+#pragma mark - CKComponentProvider
 
-/*
- // Uncomment these methods to specify if an action menu should be displayed for
- the specified item, and react to actions performed on the item
- - (BOOL)collectionView:(UICollectionView *)collectionView
- shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-        return NO;
- }
++ (CKComponent *)componentForModel:(NTItem *)item context:(NTItemContext *)context
+{
+    return [NTItemComponent newWithItem:item context:context];
+}
 
- - (BOOL)collectionView:(UICollectionView *)collectionView
- canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath
- withSender:(id)sender {
-        return NO;
- }
+#pragma mark - UIScrollViewDelegate
 
- - (void)collectionView:(UICollectionView *)collectionView
- performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath
- withSender:(id)sender {
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if( scrollView.contentSize.height == 0 ) {
+        return ;
+    }
+    
+    if (scrolledToBottomWithBuffer(scrollView.contentOffset, scrollView.contentSize, scrollView.contentInset, scrollView.bounds)) {
+        [self _enqueuePage:[_itemModelController fetchNewQuotesPageWithCount:4]];
+    }
+}
 
- }
- */
+static BOOL scrolledToBottomWithBuffer(CGPoint contentOffset, CGSize contentSize, UIEdgeInsets contentInset, CGRect bounds)
+{
+    CGFloat buffer = CGRectGetHeight(bounds) - contentInset.top - contentInset.bottom;
+    const CGFloat maxVisibleY = (contentOffset.y + bounds.size.height);
+    const CGFloat actualMaxY = (contentSize.height + contentInset.bottom);
+    return ((maxVisibleY + buffer) >= actualMaxY);
+}
 
 @end

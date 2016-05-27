@@ -7,25 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		516869741CF7E6540019DF25 /* NTCollectionViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 516869731CF7E6540019DF25 /* NTCollectionViewController.mm */; };
+		516869801CF7F0FE0019DF25 /* NTItemComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5168697F1CF7F0FE0019DF25 /* NTItemComponent.mm */; };
+		516869861CF7F57D0019DF25 /* NTItemActionsComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = 516869851CF7F57D0019DF25 /* NTItemActionsComponent.mm */; };
+		5168698C1CF7FBFF0019DF25 /* NTItemModelController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5168698B1CF7FBFF0019DF25 /* NTItemModelController.mm */; };
+		516869931CF8097A0019DF25 /* NTNetworkImageDownloader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 516869921CF8097A0019DF25 /* NTNetworkImageDownloader.mm */; };
 		518160851CF7251900079581 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 518160841CF7251900079581 /* main.m */; };
 		518160881CF7251900079581 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 518160871CF7251900079581 /* AppDelegate.m */; };
-		5181608B1CF7251900079581 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5181608A1CF7251900079581 /* ViewController.m */; };
 		5181608E1CF7251900079581 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5181608C1CF7251900079581 /* Main.storyboard */; };
 		518160901CF7251900079581 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5181608F1CF7251900079581 /* Assets.xcassets */; };
 		518160931CF7251900079581 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 518160911CF7251900079581 /* LaunchScreen.storyboard */; };
+		518160A11CF7277000079581 /* NTItemContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = 518160A01CF7277000079581 /* NTItemContext.mm */; };
+		518160A41CF7278A00079581 /* NTItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = 518160A31CF7278A00079581 /* NTItem.mm */; };
+		518160A71CF7283A00079581 /* NTItemsPage.mm in Sources */ = {isa = PBXBuildFile; fileRef = 518160A61CF7283A00079581 /* NTItemsPage.mm */; };
+		9E9246280E5C92321F09B14B /* libPods-ComponentKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCACDDB8745111D06402A021 /* libPods-ComponentKitDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2093307905B8A9F66FB978AB /* Pods-ComponentKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComponentKitDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ComponentKitDemo/Pods-ComponentKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		516869721CF7E6540019DF25 /* NTCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTCollectionViewController.h; sourceTree = "<group>"; };
+		516869731CF7E6540019DF25 /* NTCollectionViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NTCollectionViewController.mm; sourceTree = "<group>"; };
+		5168697E1CF7F0FE0019DF25 /* NTItemComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTItemComponent.h; sourceTree = "<group>"; };
+		5168697F1CF7F0FE0019DF25 /* NTItemComponent.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NTItemComponent.mm; sourceTree = "<group>"; };
+		516869841CF7F57D0019DF25 /* NTItemActionsComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTItemActionsComponent.h; sourceTree = "<group>"; };
+		516869851CF7F57D0019DF25 /* NTItemActionsComponent.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NTItemActionsComponent.mm; sourceTree = "<group>"; };
+		5168698A1CF7FBFF0019DF25 /* NTItemModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTItemModelController.h; sourceTree = "<group>"; };
+		5168698B1CF7FBFF0019DF25 /* NTItemModelController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NTItemModelController.mm; sourceTree = "<group>"; };
+		516869911CF8097A0019DF25 /* NTNetworkImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTNetworkImageDownloader.h; sourceTree = "<group>"; };
+		516869921CF8097A0019DF25 /* NTNetworkImageDownloader.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NTNetworkImageDownloader.mm; sourceTree = "<group>"; };
 		518160801CF7251900079581 /* ComponentKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComponentKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		518160841CF7251900079581 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		518160861CF7251900079581 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		518160871CF7251900079581 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		518160891CF7251900079581 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5181608A1CF7251900079581 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5181608D1CF7251900079581 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5181608F1CF7251900079581 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		518160921CF7251900079581 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		518160941CF7251900079581 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5181609F1CF7277000079581 /* NTItemContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTItemContext.h; sourceTree = "<group>"; };
+		518160A01CF7277000079581 /* NTItemContext.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NTItemContext.mm; sourceTree = "<group>"; };
+		518160A21CF7278A00079581 /* NTItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTItem.h; sourceTree = "<group>"; };
+		518160A31CF7278A00079581 /* NTItem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NTItem.mm; sourceTree = "<group>"; };
+		518160A51CF7283A00079581 /* NTItemsPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTItemsPage.h; sourceTree = "<group>"; };
+		518160A61CF7283A00079581 /* NTItemsPage.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NTItemsPage.mm; sourceTree = "<group>"; };
+		CCACDDB8745111D06402A021 /* libPods-ComponentKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ComponentKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E84C62267A5326FE6C6C1386 /* Pods-ComponentKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComponentKitDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ComponentKitDemo/Pods-ComponentKitDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +58,50 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E9246280E5C92321F09B14B /* libPods-ComponentKitDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		516869701CF7E5F60019DF25 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				516869721CF7E6540019DF25 /* NTCollectionViewController.h */,
+				516869731CF7E6540019DF25 /* NTCollectionViewController.mm */,
+				5168698A1CF7FBFF0019DF25 /* NTItemModelController.h */,
+				5168698B1CF7FBFF0019DF25 /* NTItemModelController.mm */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		516869711CF7E5FF0019DF25 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				516869901CF8094F0019DF25 /* Helpers */,
+				518160861CF7251900079581 /* AppDelegate.h */,
+				518160871CF7251900079581 /* AppDelegate.m */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		516869901CF8094F0019DF25 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				516869911CF8097A0019DF25 /* NTNetworkImageDownloader.h */,
+				516869921CF8097A0019DF25 /* NTNetworkImageDownloader.mm */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		518160771CF7251900079581 = {
 			isa = PBXGroup;
 			children = (
 				518160821CF7251900079581 /* ComponentKitDemo */,
 				518160811CF7251900079581 /* Products */,
+				CECBE18CACB94A5D3ECFBB32 /* Pods */,
+				AFC198C06B5E14E35A66839A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,10 +116,10 @@
 		518160821CF7251900079581 /* ComponentKitDemo */ = {
 			isa = PBXGroup;
 			children = (
-				518160861CF7251900079581 /* AppDelegate.h */,
-				518160871CF7251900079581 /* AppDelegate.m */,
-				518160891CF7251900079581 /* ViewController.h */,
-				5181608A1CF7251900079581 /* ViewController.m */,
+				516869711CF7E5FF0019DF25 /* App */,
+				5181609B1CF725D800079581 /* Models */,
+				5181609A1CF725C000079581 /* Components */,
+				516869701CF7E5F60019DF25 /* Controllers */,
 				5181608C1CF7251900079581 /* Main.storyboard */,
 				5181608F1CF7251900079581 /* Assets.xcassets */,
 				518160911CF7251900079581 /* LaunchScreen.storyboard */,
@@ -79,6 +137,47 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5181609A1CF725C000079581 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5168697E1CF7F0FE0019DF25 /* NTItemComponent.h */,
+				5168697F1CF7F0FE0019DF25 /* NTItemComponent.mm */,
+				516869841CF7F57D0019DF25 /* NTItemActionsComponent.h */,
+				516869851CF7F57D0019DF25 /* NTItemActionsComponent.mm */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		5181609B1CF725D800079581 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5181609F1CF7277000079581 /* NTItemContext.h */,
+				518160A01CF7277000079581 /* NTItemContext.mm */,
+				518160A21CF7278A00079581 /* NTItem.h */,
+				518160A31CF7278A00079581 /* NTItem.mm */,
+				518160A51CF7283A00079581 /* NTItemsPage.h */,
+				518160A61CF7283A00079581 /* NTItemsPage.mm */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		AFC198C06B5E14E35A66839A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCACDDB8745111D06402A021 /* libPods-ComponentKitDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CECBE18CACB94A5D3ECFBB32 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2093307905B8A9F66FB978AB /* Pods-ComponentKitDemo.debug.xcconfig */,
+				E84C62267A5326FE6C6C1386 /* Pods-ComponentKitDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +185,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 518160971CF7251900079581 /* Build configuration list for PBXNativeTarget "ComponentKitDemo" */;
 			buildPhases = (
+				08AA15CC2F435E50EF1EEC4C /* Check Pods Manifest.lock */,
 				5181607C1CF7251900079581 /* Sources */,
 				5181607D1CF7251900079581 /* Frameworks */,
 				5181607E1CF7251900079581 /* Resources */,
+				48465C218CA34C5E5D36FE86 /* Embed Pods Frameworks */,
+				51DCDF03355DD9935E38C692 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,13 +246,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		08AA15CC2F435E50EF1EEC4C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		48465C218CA34C5E5D36FE86 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ComponentKitDemo/Pods-ComponentKitDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51DCDF03355DD9935E38C692 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ComponentKitDemo/Pods-ComponentKitDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5181607C1CF7251900079581 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5181608B1CF7251900079581 /* ViewController.m in Sources */,
+				516869861CF7F57D0019DF25 /* NTItemActionsComponent.mm in Sources */,
+				516869931CF8097A0019DF25 /* NTNetworkImageDownloader.mm in Sources */,
+				516869741CF7E6540019DF25 /* NTCollectionViewController.mm in Sources */,
+				518160A41CF7278A00079581 /* NTItem.mm in Sources */,
+				518160A11CF7277000079581 /* NTItemContext.mm in Sources */,
 				518160881CF7251900079581 /* AppDelegate.m in Sources */,
+				516869801CF7F0FE0019DF25 /* NTItemComponent.mm in Sources */,
+				518160A71CF7283A00079581 /* NTItemsPage.mm in Sources */,
+				5168698C1CF7FBFF0019DF25 /* NTItemModelController.mm in Sources */,
 				518160851CF7251900079581 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +418,7 @@
 		};
 		518160981CF7251900079581 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2093307905B8A9F66FB978AB /* Pods-ComponentKitDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ComponentKitDemo/Info.plist;
@@ -272,6 +430,7 @@
 		};
 		518160991CF7251900079581 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E84C62267A5326FE6C6C1386 /* Pods-ComponentKitDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ComponentKitDemo/Info.plist;
@@ -300,6 +459,7 @@
 				518160991CF7251900079581 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

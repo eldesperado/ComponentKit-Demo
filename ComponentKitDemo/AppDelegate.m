@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "NTCollectionViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,17 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+    [flowLayout setMinimumInteritemSpacing:0];
+    [flowLayout setMinimumLineSpacing:0];
+    
+    NTCollectionViewController *viewController = [[NTCollectionViewController alloc] initWithCollectionViewLayout:flowLayout];
+    
+    [_window setRootViewController:[[UINavigationController alloc] initWithRootViewController:viewController]];
+    [_window makeKeyAndVisible];
     return YES;
 }
 

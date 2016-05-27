@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "NTNetworkImageDownloader.h"
 
 @interface NTItemContext : NSObject
+@property (strong, nonatomic, readonly) NTNetworkImageDownloader *imageDownloader;
 
+- (instancetype)initWithImageDownloader:(NTNetworkImageDownloader *)imageDownloader;
 @end

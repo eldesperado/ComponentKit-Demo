@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <ComponentKit/CKNetworkImageDownloading.h>
 
-@interface NTNetworkImageDownloader : NSObject
+@interface NTNetworkImageDownloader : NSObject <CKNetworkImageDownloading>
 
 @end

@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NTItemsPage.h"
 
 @interface NTItemModelController : NSObject
+
+- (NTItemsPage *)fetchNewQuotesPageWithCount:(NSInteger)count;
 
 @end

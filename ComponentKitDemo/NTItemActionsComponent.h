@@ -7,7 +7,11 @@
 //
 
 #import <ComponentKit/ComponentKit.h>
+#import "NTItem.h"
+#import "NTItemContext.h"
 
 @interface NTItemActionsComponent : CKCompositeComponent
+
++ (instancetype)newWithItem:(NTItem *)item context:(NTItemContext *)context;
 
 @end
