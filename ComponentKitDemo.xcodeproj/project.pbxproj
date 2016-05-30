@@ -229,6 +229,7 @@
 				TargetAttributes = {
 					5181607F1CF7251900079581 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = R46BQREB72;
 					};
 				};
 			};
@@ -441,6 +442,7 @@
 			baseConfigurationReference = 2093307905B8A9F66FB978AB /* Pods-ComponentKitDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ComponentKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zalo.test.ComponentKitDemo;
@@ -453,6 +455,7 @@
 			baseConfigurationReference = E84C62267A5326FE6C6C1386 /* Pods-ComponentKitDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ComponentKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zalo.test.ComponentKitDemo;

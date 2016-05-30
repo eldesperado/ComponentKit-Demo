@@ -66,6 +66,7 @@ static CKComponent *backgroundComponent(NTItem *item, NTItemContext *context)
                           .string = item.title,
                           .font = [UIFont fontWithName:@"Baskerville" size:30],
                           .color = [UIColor whiteColor],
+                          .alignment = NSTextAlignmentCenter,
                       }
                       viewAttributes:{
                           {@selector(setBackgroundColor:), [UIColor clearColor]},
