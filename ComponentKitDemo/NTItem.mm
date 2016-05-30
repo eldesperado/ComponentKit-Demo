@@ -10,12 +10,14 @@
 
 @implementation NTItem
 - (instancetype)initWithTitle:(NSString *)title
-                    imageURLString:(NSString *)imageURLString {
-  if (self = [super init]) {
-    _itemId = [[NSUUID UUID] UUIDString];
-    _title = [title copy];
-    _imageURL = [NSURL URLWithString:imageURLString];
-  }
-  return self;
+               imageURLString:(NSString *)imageURLString
+                        style:(NTItemComponentType)style {
+    if (self = [super init]) {
+        _itemId = [[NSUUID UUID] UUIDString];
+        _title = [title copy];
+        _imageURL = [NSURL URLWithString:imageURLString];
+        _style = style;
+    }
+    return self;
 }
 @end

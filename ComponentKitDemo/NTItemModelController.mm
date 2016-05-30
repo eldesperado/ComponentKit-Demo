@@ -8,6 +8,7 @@
 
 #import "NTItemModelController.h"
 #import "NTItem.h"
+#import "NTItemComponentType.h"
 
 @implementation NTItemModelController
 {
@@ -42,11 +43,25 @@ static NSArray *generateItems(NSInteger count)
     for (NSUInteger i = 0; i< count; i++) {
         NSString *title = generateTitle();
         NSString *imageURLString = [NSString stringWithFormat:@"https://unsplash.it/500/300?image=%d", arc4random_uniform((uint32_t)30)];
-        NTItem *item = [[NTItem alloc] initWithTitle:title imageURLString:imageURLString];
+        NTItem *item = [[NTItem alloc] initWithTitle:title
+                                      imageURLString:imageURLString
+                                               style:generateStyle(i)];
         
         [_items addObject:item];
     }
     return _items;
+}
+
+static NTItemComponentType generateStyle(NSUInteger index)
+{
+    switch (index % 2) {
+        case 0:
+            return NTItemComponentTypeImage;
+        case 1:
+            return NTItemComponentTypeQuote;
+        default:
+            return NTItemComponentTypeImage;
+    }
 }
 
 static NSString *generateTitle()

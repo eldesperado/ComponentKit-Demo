@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		514901281CFBDE1300E145C2 /* NTItemComponentImage.mm in Sources */ = {isa = PBXBuildFile; fileRef = 514901271CFBDE1300E145C2 /* NTItemComponentImage.mm */; };
+		5149012B1CFBDE2A00E145C2 /* NTItemComponentQuote.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5149012A1CFBDE2A00E145C2 /* NTItemComponentQuote.mm */; };
+		5149012E1CFBE6C300E145C2 /* NTOverlayBackgroundComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5149012D1CFBE6C300E145C2 /* NTOverlayBackgroundComponent.mm */; };
 		516869741CF7E6540019DF25 /* NTCollectionViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 516869731CF7E6540019DF25 /* NTCollectionViewController.mm */; };
 		516869801CF7F0FE0019DF25 /* NTItemComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5168697F1CF7F0FE0019DF25 /* NTItemComponent.mm */; };
 		516869861CF7F57D0019DF25 /* NTItemActionsComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = 516869851CF7F57D0019DF25 /* NTItemActionsComponent.mm */; };
@@ -25,6 +28,13 @@
 
 /* Begin PBXFileReference section */
 		2093307905B8A9F66FB978AB /* Pods-ComponentKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComponentKitDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ComponentKitDemo/Pods-ComponentKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		514901221CFBDC0100E145C2 /* NTItemComponentType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTItemComponentType.h; sourceTree = "<group>"; };
+		514901261CFBDE1300E145C2 /* NTItemComponentImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTItemComponentImage.h; sourceTree = "<group>"; };
+		514901271CFBDE1300E145C2 /* NTItemComponentImage.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NTItemComponentImage.mm; sourceTree = "<group>"; };
+		514901291CFBDE2A00E145C2 /* NTItemComponentQuote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTItemComponentQuote.h; sourceTree = "<group>"; };
+		5149012A1CFBDE2A00E145C2 /* NTItemComponentQuote.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NTItemComponentQuote.mm; sourceTree = "<group>"; };
+		5149012C1CFBE6C300E145C2 /* NTOverlayBackgroundComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTOverlayBackgroundComponent.h; sourceTree = "<group>"; };
+		5149012D1CFBE6C300E145C2 /* NTOverlayBackgroundComponent.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NTOverlayBackgroundComponent.mm; sourceTree = "<group>"; };
 		516869721CF7E6540019DF25 /* NTCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTCollectionViewController.h; sourceTree = "<group>"; };
 		516869731CF7E6540019DF25 /* NTCollectionViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NTCollectionViewController.mm; sourceTree = "<group>"; };
 		5168697E1CF7F0FE0019DF25 /* NTItemComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTItemComponent.h; sourceTree = "<group>"; };
@@ -144,6 +154,13 @@
 				5168697F1CF7F0FE0019DF25 /* NTItemComponent.mm */,
 				516869841CF7F57D0019DF25 /* NTItemActionsComponent.h */,
 				516869851CF7F57D0019DF25 /* NTItemActionsComponent.mm */,
+				514901221CFBDC0100E145C2 /* NTItemComponentType.h */,
+				514901261CFBDE1300E145C2 /* NTItemComponentImage.h */,
+				514901271CFBDE1300E145C2 /* NTItemComponentImage.mm */,
+				514901291CFBDE2A00E145C2 /* NTItemComponentQuote.h */,
+				5149012A1CFBDE2A00E145C2 /* NTItemComponentQuote.mm */,
+				5149012C1CFBE6C300E145C2 /* NTOverlayBackgroundComponent.h */,
+				5149012D1CFBE6C300E145C2 /* NTOverlayBackgroundComponent.mm */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -302,7 +319,10 @@
 				516869861CF7F57D0019DF25 /* NTItemActionsComponent.mm in Sources */,
 				516869931CF8097A0019DF25 /* NTNetworkImageDownloader.mm in Sources */,
 				516869741CF7E6540019DF25 /* NTCollectionViewController.mm in Sources */,
+				5149012B1CFBDE2A00E145C2 /* NTItemComponentQuote.mm in Sources */,
 				518160A41CF7278A00079581 /* NTItem.mm in Sources */,
+				514901281CFBDE1300E145C2 /* NTItemComponentImage.mm in Sources */,
+				5149012E1CFBE6C300E145C2 /* NTOverlayBackgroundComponent.mm in Sources */,
 				518160A11CF7277000079581 /* NTItemContext.mm in Sources */,
 				518160881CF7251900079581 /* AppDelegate.m in Sources */,
 				516869801CF7F0FE0019DF25 /* NTItemComponent.mm in Sources */,
