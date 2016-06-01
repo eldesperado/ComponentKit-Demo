@@ -8,10 +8,7 @@ A simple demo application for learning [ComponentKit](https://github.com/faceboo
 All images I used in this project belong to [Unsplash.com](https://unsplash.com/)
 
 # Todo
-- [X] Add MacOS Demo
-- [X] Auto-calculate the frame count
-- [X] Show preview of GIF in iOS App
-- [X] Create GIFs based on enums for quality type 
+- [ ] Add video-type cell
 
 Pull requests are more than welcomed!
 
